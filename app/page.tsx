@@ -1,9 +1,12 @@
 import Image from "next/image";
 
+function itemWindow() {
+    
+}
 
 const ListItem: React.FC<{ itemId: string; itemName: string }> = ({ itemId, itemName }) => {
     return (
-        <div className="flex justify-between items-center p-2 hover:bg-slate-800 duration-200 rounded cursor-pointer">
+        <div onClick={itemWindow(itemId)} className="flex justify-between items-center p-2 hover:bg-slate-800 duration-200 rounded cursor-pointer">
             <div className="flex items-center">
                 <Image src={"/thumbs/" + {itemId}} width={40} height={40} alt="Thumbnail" className="rounded-full mr-4" />
                 <div>{itemName}</div>
